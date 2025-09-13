@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </table>
                 <p class="total-hours">Total study hours: ${totalHours}</p>
                 <div style="text-align: center; margin-top: 30px;">
-                    <button id="downloadBtn" class="btn download-btn" style="font-size: 0.9em; padding: 20px 40px;" onclick="downloadPDF()">Download Timetable</button>
+                    <button id="downloadBtn" class="btn download-btn" style="font-size: 1em; padding: 20px 40px;" onclick="downloadPDF()">Download Timetable</button>
                 </div>
             </div>
         `;

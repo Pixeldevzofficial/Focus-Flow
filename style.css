@@ -97,6 +97,7 @@ img {
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     border-radius: 20px;
+    position: relative;
 }
 
 .card {
@@ -110,6 +111,24 @@ to {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.home-p {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+.home-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 25px;
+}
+
+.home-btn a {
+    padding: 15px 35px;
 }
 
 .theme-btn {
@@ -295,4 +314,102 @@ select:hover {
 @keyframes gradientStatic {
     0% { background-position: 0% 50%; }
     100% { background-position: 0% 50%; }
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 90%;
+        margin: 20px;
+        padding: 15px;
+    }
+
+    .home-btn {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .home-p {
+        font-size: 16px;
+    }
+
+    .study-table {
+        font-size: 14px;
+    }
+
+    .study-table th,
+    .study-table td {
+        padding: 8px 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .home-p {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .study-table {
+        font-size: 12px;
+    }
+
+    .study-table th,
+    .study-table td {
+        padding: 6px 8px;
+    }
+    
+    img {
+        width: 80px;
+    }
+}
+
+.back-btn {
+    position: absolute;
+    top: 45px;
+    left: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: var(--text-color);
+    transition: transform 0.3s ease;
+    z-index: 10;
+    opacity: 0.8;
+}
+
+.back-btn:hover {
+    transform: translateX(-5px);
 }
