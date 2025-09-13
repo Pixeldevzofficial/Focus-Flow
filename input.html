@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.2.0/css/line.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <title>Focus Flow</title>
+</head>
+<body>
+    <div class="container">
+        <button class="back-btn" onclick="window.location.href='index.html'">
+            <i class="uil uil-arrow-left"></i>
+        </button>
+        <div class="card">
+            <h1 class="heading-h1">Focus Flow</h1>
+        <div class="content">
+            <div class="logo">
+                <img src="/assets/focus flow.png" alt="Focus Flow Logo">
+            </div>
+            
+            <div class="subject">
+                <h3>Enter your Subjects</h3>
+                <div class="subject-input-container">
+                    <label for="subject-input">Subject 1:</label>
+                    <input type="text" class="subject-input">
+                    
+                    <label for="subject-input">Subject 2</label>
+                    <input type="text" class="subject-input">
+                    
+                    <label for="subject-input">Subject 3</label>
+                    <input type="text" class="subject-input">
+                </div>
+                <a href="#" class="add-subject-btn btn">Add Subjects</a>
+            </div>
+            
+            <div class="hours">
+                <h3>How many hours per day?</h3>
+                <select id="myList" name="selectedOption">
+                    <option value="1 hours">1</option>
+                    <option value="2 hours">2</option>
+                    <option value="3 hours">3</option>
+                    <option value="4 hours">4</option>
+                    <option value="5 hours">5</option>
+                    <option value="6 hours">6</option>
+                    <option value="7 hours">7</option>
+                    <option value="8 hours">8</option>
+                    <option value="9 hours">9</option>
+                    <option value="10 hours">10</option>
+                    <option value="11 hours">11</option>
+                    <option value="12 hours">12</option>
+                    <option value="13 hours">13</option>
+                    <option value="14 hours">14</option>
+                    <option value="15 hours">15</option>
+                    <option value="16 hours">16</option>
+                    <option value="17 hours">17</option>
+                    <option value="18 hours">18</option>
+                    <option value="19 hours">19</option>
+                    <option value="20 hours">20</option>
+                    <option value="21 hours">21</option>
+                    <option value="22 hours">22</option>
+                    <option value="23 hours">23</option>
+                    <option value="24 hours">24</option>
+                </select>
+            </div>
+            <div class="generate-btn">
+                <a href="output.html" class="btn generate-timetable-btn">Generate Timetable</a>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</body>
+</html>
