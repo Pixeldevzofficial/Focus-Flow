@@ -98,6 +98,8 @@ img {
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     border-radius: 20px;
     position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .card {
@@ -316,70 +318,99 @@ select:hover {
     100% { background-position: 0% 50%; }
 }
 
-/* Media Queries */
 @media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+        overflow-x: hidden;
+    }
+
     .container {
-        max-width: 90%;
-        margin: 20px;
+        width: 95%;
+        margin: 10px auto;
         padding: 15px;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    .content {
+        padding: 10px;
+        gap: 15px;
     }
 
     .home-btn {
         flex-direction: column;
+        width: 100%;
         gap: 15px;
     }
 
     .btn {
         width: 100%;
-        text-align: center;
+        max-width: 300px;
+        padding: 12px 20px;
+        margin: 0 auto;
     }
 
-    h1 {
-        font-size: 24px;
-    }
+    h1 { font-size: 24px; }
+    h3 { font-size: 20px; }
+    .home-p { font-size: 16px; }
 
-    .home-p {
-        font-size: 16px;
+    .study-table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     .study-table {
-        font-size: 14px;
-    }
-
-    .study-table th,
-    .study-table td {
-        padding: 8px 10px;
+        min-width: 500px;
     }
 }
 
 @media screen and (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+
     .container {
-        margin: 10px;
+        width: 98%;
         padding: 10px;
+        border-radius: 15px;
     }
 
-    h1 {
-        font-size: 20px;
-    }
-
-    h3 {
-        font-size: 18px;
-    }
-
-    .home-p {
-        font-size: 14px;
+    .content {
+        padding: 5px;
+        gap: 10px;
     }
 
     .btn {
-        padding: 12px 20px;
+        max-width: 250px;
+        padding: 10px 15px;
         font-size: 14px;
     }
+
+    h1 { font-size: 20px; }
+    h3 { font-size: 18px; }
+    .home-p { font-size: 14px; }
 
     input[type="text"],
     input[type="number"],
     select {
-        font-size: 14px;
         padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .theme-btn,
+    .back-btn {
+        font-size: 20px;
+    }
+
+    .subject-input-container {
+        width: 100%;
+        padding: 0 5px;
+    }
+
+    .add-subject-btn button {
+        padding: 8px 15px;
+        font-size: 14px;
     }
 
     .study-table {
@@ -388,28 +419,34 @@ select:hover {
 
     .study-table th,
     .study-table td {
-        padding: 6px 8px;
+        padding: 8px;
     }
-    
-    img {
-        width: 80px;
+
+    .total-hours {
+        font-size: 14px;
+        margin-top: 15px;
     }
 }
 
-.back-btn {
-    position: absolute;
-    top: 45px;
-    left: 30px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 24px;
-    color: var(--text-color);
-    transition: transform 0.3s ease;
-    z-index: 10;
-    opacity: 0.8;
-}
+@media screen and (max-width: 320px) {
+    .container {
+        width: 100%;
+        padding: 8px;
+        border-radius: 12px;
+    }
 
-.back-btn:hover {
-    transform: translateX(-5px);
+    .btn {
+        max-width: 200px;
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    h1 { font-size: 18px; }
+    h3 { font-size: 16px; }
+    .home-p { font-size: 13px; }
+
+    .theme-btn,
+    .back-btn {
+        font-size: 18px;
+    }
 }
